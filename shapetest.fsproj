@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <PackageReference Include="Aardvark.Application.Slim.GL" Version="4.12.4" />
+    <PackageReference Include="Aardvark.Application.Slim.Vulkan" Version="4.12.4" />
     <PackageReference Include="Aardvark.SceneGraph" Version="4.12.4" />
     <PackageReference Include="Aardvark.Rendering.Text" Version="4.12.4" />
   </ItemGroup>

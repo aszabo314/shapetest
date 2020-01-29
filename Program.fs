@@ -11,9 +11,10 @@ open Aardvark.Application.Slim
 let main argv = 
     Ag.initialize()
     Aardvark.Init()
-
-    use app = new OpenGlApplication(true)
+ 
+    use app = new VulkanApplication()
     use win = app.CreateGameWindow(8)
+
 
     let quadGeometry =
         IndexedGeometry(
@@ -119,6 +120,6 @@ let main argv =
     let task =
         app.Runtime.CompileRender(win.FramebufferSignature, sg)
 
-    win.RenderTask <- task
+    win.RenderTask <- RenderTask.ofList [ task ]
     win.Run()
     0
